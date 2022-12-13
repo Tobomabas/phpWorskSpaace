@@ -24,7 +24,7 @@ else  {
 }
 
 
-
+$test;
 
 $view = new View();
 $view->render($page, $viewParams);
