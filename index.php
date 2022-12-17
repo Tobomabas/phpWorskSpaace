@@ -11,20 +11,29 @@ require_once("src/View.php");
 const DEFAUL_ACTION = 'list';
 
 $action = $_GET['action'] ?? DEFAUL_ACTION;
+ 
 
 
 $viewParams = [];
 if ($action === 'create') {
     $page = 'create';
-    $viewParams['resultCreate'] = "udalo się";
+    if (!empty ($_POST)){
+        $viewParams = [
+            'title' => $_POST['title'],
+            'description' => $_POST['description']
+           ];
+           
+    }
+  
+    
+
+    
 }
 else  {
     $page = 'list';
     $viewParams['resultList'] = "Wyswietlamy notatki";
 }
 
-
-$test;
 
 $view = new View();
 $view->render($page, $viewParams);
