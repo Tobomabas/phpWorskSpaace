@@ -21,7 +21,6 @@ class Controller
          
         return $this->getRequestGet()['action'] ?? self::DEFAUL_ACTION;
     }
-
         public function run(): void{
        
                  $viewParams = [];
