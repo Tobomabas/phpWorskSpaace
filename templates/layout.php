@@ -9,13 +9,12 @@
         <div class="container">
             <div class="menu">
                 <ul>
-                    <li><a href="/?action=lis5t">Lista notatek</a></li>
+                    <li><a href="/?action=list">Lista notatek</a></li>
                     <li><a href="/?action=create">Nowa notatka</a></li>
                 </ul>
             </div>
             <?php   
                 require_once("templates/pages/$page.php");
-         
             ?>
                 
             <div class="content"></div>
